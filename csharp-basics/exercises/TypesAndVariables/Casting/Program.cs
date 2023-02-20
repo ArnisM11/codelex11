@@ -20,12 +20,12 @@ namespace Casting
             string a = "1";
             int b = 2;
             int c = 3;
-            int d = 4;
-            int e = 5;
+            double d = 4;
+            float e = 5;
 
             //fixme - should be 15 :|
-            int sum = Convert.ToInt32(a) + b + c + d + e;
-            Console.WriteLine(sum);
+            //int sum = a + b + c + d + e;
+            //Console.WriteLine(sum);
         }
 
         static void Second()
@@ -37,8 +37,8 @@ namespace Casting
             float e = 5.3f;
 
             //fixme - should be 15.5 :| 
-            float sum = Convert.ToInt32(a) + b + c + (float)d + e;
-            Console.WriteLine(sum);
+            //float sum = a + b + c + d + e;
+            //Console.WriteLine(sum);
         }
     }
 }

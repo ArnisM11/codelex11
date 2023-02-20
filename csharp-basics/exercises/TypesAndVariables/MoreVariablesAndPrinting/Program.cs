@@ -6,36 +6,28 @@ namespace MoreVariablesAndPrinting
     {
         static void Main(string[] args)
         {
-            
-            
+            string myName, myEyes, myTeeth, myHair;
+            int myAge, myHeight, myWeight;
 
-            string Name = "Zed A. Shaw";
-            int Age = 35;
-            int Height = 74;  // inches
-            int Weight = 180; // lbs
-            string Eyes = "Blue";
-            string Teeth = "White";
-            string Hair = "Brown";
+            myName = "Zed A. Shaw";
+            myAge = 35;
+            myHeight = 74;  // inches
+            myWeight = 180; // lbs
+            myEyes = "Blue";
+            myTeeth = "White";
+            myHair = "Brown";
 
-            Console.WriteLine("Let's talk about " + Name + ".");
-            Console.WriteLine("He's " + Height + " inches tall. Which is " + inchesToCm(Height) + " in centimeters.");
-            Console.WriteLine("He's " + Weight + " pounds heavy. Which is " + lbsToKg(Weight).ToString("N2") + " in kilos. ");
+            Console.WriteLine("Let's talk about " + myName + ".");
+            Console.WriteLine("He's " + myHeight + " inches tall.");
+            Console.WriteLine("He's " + myWeight + " pounds heavy.");
             Console.WriteLine("Actually, that's not too heavy.");
-            Console.WriteLine("He's got " + Eyes + " eyes and " + Hair + " hair.");
-            Console.WriteLine("His teeth are usually " + Teeth + " depending on the coffee.");
+            Console.WriteLine("He's got " + myEyes + " eyes and " + myHair + " hair.");
+            Console.WriteLine("His teeth are usually " + myTeeth + " depending on the coffee.");
 
-            Console.WriteLine("If I add " + Age + ", " + Height + ", and " + Weight
-                               + " I get " + (Age + Height + Weight) + ".");
+            Console.WriteLine("If I add " + myAge + ", " + myHeight + ", and " + myWeight
+                               + " I get " + (myAge + myHeight + myWeight) + ".");
 
             Console.ReadKey();
-        }
-        public static float inchesToCm(int i)
-        {
-            return i * 2.54f;
-        }
-        public static float lbsToKg(int l)
-        {
-            return l * 0.453592f;
         }
     }
 }
