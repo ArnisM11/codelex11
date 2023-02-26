@@ -8,9 +8,6 @@ namespace PositiveNegativeNumber
         {
             Console.Write("Enter the number ---> ");
             var input = Convert.ToInt32(Console.ReadLine());
-            
-            
-            
             if (input >0)
             {
                 Console.WriteLine("Number is positive");
@@ -23,7 +20,6 @@ namespace PositiveNegativeNumber
             {
                 Console.WriteLine("Number is zero");
             }
-
             Console.ReadKey();
             Console.ReadKey();
 

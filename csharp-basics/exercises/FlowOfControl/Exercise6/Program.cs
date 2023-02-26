@@ -11,7 +11,6 @@ namespace GetTheCentury
             Console.WriteLine(Century(1000));
             Console.WriteLine(Century(1001));
             Console.WriteLine(Century(2005));
-
             Console.ReadKey();
         }
 
@@ -31,10 +30,9 @@ namespace GetTheCentury
                 else if (year >= 1801 && year <= 1900) return "19th century";
                 else if (year >= 1901 && year <= 2000) return "20th century";
                 else if (year >= 2001 && year <= 2010) return "21th century";
-                
-                
             }
-            return "error";
+            else return "error";
+            return "not handled";
         }
     }
 }
