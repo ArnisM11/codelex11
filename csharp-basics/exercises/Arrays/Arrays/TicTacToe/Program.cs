@@ -14,48 +14,46 @@ namespace TicTacToe
             int yCord = 0;
             InitBoard();
             DisplayBoard();
-
-            while (checkWinner())
+            do
             {
                 Console.Write(isTurn + ", choose your location(row ,column) : ");
                 input = Console.ReadLine();
                 xCord = input[0] - '0';
                 yCord = input[2] - '0';
-                Console.WriteLine();
-                if (isTurn != 'X')
+                if (checkMove(xCord, yCord))
                 {
-                    isTurn = 'O';
+                    Console.WriteLine();
                     board[xCord, yCord] = isTurn;
-                    isTurn = 'X';
+                    isTurn = (isTurn == 'X') ? 'O' : 'X';
+                    DisplayBoard();
                 }
-                else
+                else Console.WriteLine("Invalid move, try again!" + xCord + " " + yCord);
+                if (checkTie())
                 {
-                    board[xCord, yCord] = isTurn;
-                    isTurn = 'O';
+                    Console.WriteLine("Game is tie!");
+                    break;
                 }
-                DisplayBoard();
+            } while (!checkWinner(isTurn));
+            if (!checkTie())
+            {
+                if (isTurn == 'X') Console.WriteLine("Winner is X");
+                else if (isTurn == 'O') Console.WriteLine("Winner is O");
             }
-
-            if (isTurn == 'X') Console.WriteLine("Winner is O");
-            else if (isTurn == 'O') Console.WriteLine("Winner is X");
 
             Console.ReadLine();
         }
-
         public static void InitBoard()
         {
             // fills up the board with blanks
-            for (var r = 0; r < 2; r++)
+            for (var r = 0; r < 3; r++)
             {
-                for (var c = 0; c < 2; c++)
+                for (var c = 0; c < 3; c++)
                     board[r, c] = ' ';
             }
-            
         }
-
         public static void DisplayBoard()
         {
-            Console.WriteLine("   x 0|1|2");
+            Console.WriteLine();
             Console.WriteLine("  0  " + board[0, 0] + "|" + board[0, 1] + "|" + board[0, 2]);
             Console.WriteLine("    --+-+--");
             Console.WriteLine("  1  " + board[1, 0] + "|" + board[1, 1] + "|" + board[1, 2]);
@@ -63,17 +61,35 @@ namespace TicTacToe
             Console.WriteLine("  2  " + board[2, 0] + "|" + board[2, 1] + "|" + board[2, 2]);
             Console.WriteLine("    --+-+--");
         }
-
-        public static bool checkWinner()
+        public static bool checkWinner(char isTurn)
         {
-            if (board[0, 0] == board[0, 1] && board[0, 1] == board[0, 2] && board[0,0] == board[0,2]) return true;                  //horizontals
-            else if (board[1, 0] == board[1, 1] && board[1, 1] == board[1, 2] && board[1, 0] == board[1, 2]) return true;
-            else if (board[2, 0] == board[2, 1] && board[2, 1] == board[2, 2] && board[2, 0] == board[2, 2]) return true;
-            else if (board[0, 0] == board[1, 0] && board[1, 0] == board[2, 0] && board[0, 0] == board[2, 0]) return true;             //verticals
-            else if (board[0, 1] == board[1, 1] && board[1, 1] == board[2, 1] && board[0, 1] == board[2, 1]) return true;
-            else if (board[0, 2] == board[1, 2] && board[1, 2] == board[2, 2] && board[0, 2] == board[2, 2]) return true;
-            else if (board[0, 0] == board[1, 1] && board[1, 2] == board[2, 2] && board[0, 0] == board[2, 2]) return true;             //diagonals
-            else if (board[0, 2] == board[1, 1] && board[1, 1] == board[2, 0] && board[0, 2] == board[2, 0]) return true;
+            for (int row = 0; row < 3; row++)
+            {
+                if (board[row, 0] == isTurn && board[row, 1] == isTurn && board[row, 2] == isTurn && board[row,0] != ' ') return true;
+            }
+            for (int col = 0; col < 3; col++)
+            {
+                if (board[0, col] == isTurn && board[1, col] == isTurn && board[2, col] == isTurn && board[col, 0] != ' ') return true;
+            }
+            if (board[0, 0] == isTurn && board[1, 1] == isTurn && board[2, 2] == isTurn && board[0, 0] != ' ' && board[1, 1] != ' ' && board[2, 2] != ' ') return true;
+            if (board[0, 2] == isTurn && board[1, 1] == isTurn && board[2, 0] == isTurn && board[0, 2] != ' ' && board[1, 1] != ' ' && board[2, 0] != ' ') return true;
+            return false;
+        }
+
+        static bool checkMove(int x,int y)
+        {
+            if (x >= 0 && x < 3 && y >= 0 && y < 3 && board[x, y] == ' ') return true;
+            else return false;
+        }
+        static bool checkTie()
+        {
+            int symbols = 0;
+            for (int r = 0; r < 3; r++)
+            {
+                for (int c = 0; c < 3; c++)
+                    if (board[r, c] != ' ') symbols++;
+            }
+            if (symbols >= 9) return true;
             else return false;
         }
     }

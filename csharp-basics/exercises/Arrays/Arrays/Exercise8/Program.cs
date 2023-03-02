@@ -54,7 +54,6 @@
                 Main(args);
             }
         }
-
         public static string randomWordStripes(string word)
         {
             string result = "";
