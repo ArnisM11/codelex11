@@ -2,18 +2,18 @@ using System;
 
 namespace DragRace
 {
-    public class Tesla
+    public class Tesla : ICar
     {
         private int currentSpeed = 0;
 
         public void SpeedUp() 
         {
-            currentSpeed;
+            currentSpeed += 11;
         }
 
         public void SlowDown() 
         {
-            currentSpeed;
+            currentSpeed -= 11;
         }
 
         public string ShowCurrentSpeed() 

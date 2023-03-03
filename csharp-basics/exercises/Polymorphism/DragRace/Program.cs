@@ -18,7 +18,7 @@ namespace DragRace
 
         private static void Main(string[] args)
         {
-            
+            var cars = new List<ICar>();
         }
     }
 }
