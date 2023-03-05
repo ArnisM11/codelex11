@@ -23,8 +23,7 @@
                     arr[i] = Char.ToLower(arr[i]);
                 }
             }
-            string result = new string(arr);
-            return result;
+            return new string(arr);
         }
     }
 }

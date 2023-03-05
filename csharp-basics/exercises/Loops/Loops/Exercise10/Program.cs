@@ -17,6 +17,7 @@
                 {
                     Console.Write(j);
                 }
+
                 for (int k = min; k < i; k++)
                 {
                     Console.Write(k);
