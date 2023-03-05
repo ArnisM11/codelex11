@@ -72,7 +72,9 @@ namespace TicTacToe
             {
                 if (board[0, col] == isTurn && board[1, col] == isTurn && board[2, col] == isTurn && board[col, 0] != ' ') return true;
             }
+
             if (board[0, 0] == isTurn && board[1, 1] == isTurn && board[2, 2] == isTurn && board[0, 0] != ' ' && board[1, 1] != ' ' && board[2, 2] != ' ') return true;
+
             if (board[0, 2] == isTurn && board[1, 1] == isTurn && board[2, 0] == isTurn && board[0, 2] != ' ' && board[1, 1] != ' ' && board[2, 0] != ' ') return true;
             return false;
         }
