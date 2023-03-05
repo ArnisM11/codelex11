@@ -17,11 +17,11 @@ namespace Exercise4
                 1456, 2265, 1457, 2456
             };
             int specificValue = 2456;
-            for (int i = 0;i<myArray.Length;i++) {
+            for (int i = 0;i<myArray.Length;i++)
+            {
                 if (myArray[i] == specificValue) Console.WriteLine("Contains!");
             }
             Console.ReadKey();
-            
         }
     }
 }

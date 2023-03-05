@@ -28,12 +28,14 @@ namespace TicTacToe
                     DisplayBoard();
                 }
                 else Console.WriteLine("Invalid move, try again!" + xCord + " " + yCord);
+
                 if (checkTie())
                 {
                     Console.WriteLine("Game is tie!");
                     break;
                 }
-            } while (!checkWinner(isTurn));
+            } while (!CheckWinner(isTurn));
+
             if (!checkTie())
             {
                 if (isTurn == 'X') Console.WriteLine("Winner is X");
@@ -44,7 +46,6 @@ namespace TicTacToe
         }
         public static void InitBoard()
         {
-            // fills up the board with blanks
             for (var r = 0; r < 3; r++)
             {
                 for (var c = 0; c < 3; c++)
@@ -61,7 +62,7 @@ namespace TicTacToe
             Console.WriteLine("  2  " + board[2, 0] + "|" + board[2, 1] + "|" + board[2, 2]);
             Console.WriteLine("    --+-+--");
         }
-        public static bool checkWinner(char isTurn)
+        public static bool CheckWinner(char isTurn)
         {
             for (int row = 0; row < 3; row++)
             {

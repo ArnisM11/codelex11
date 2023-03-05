@@ -7,7 +7,7 @@
             string[] words = { "leviathan", "car", "telephone", "autobus" };
             Random rnd = new Random();
             string randomWord = words[rnd.Next(0,words.Length)];
-            string guessedWord = randomWordStripes(randomWord);
+            string guessedWord = RandomWordStripes(randomWord);
             int maxMisses = 5;
             string missedLetters = "";
             int missedGuesses = 0;
@@ -54,7 +54,8 @@
                 Main(args);
             }
         }
-        public static string randomWordStripes(string word)
+
+        public static string RandomWordStripes(string word)
         {
             string result = "";
             for(int i = 0; i < word.Length; i++)

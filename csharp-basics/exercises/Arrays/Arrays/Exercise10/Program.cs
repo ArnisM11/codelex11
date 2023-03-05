@@ -10,10 +10,10 @@
             int[] arr3 = { 91, -4, 80, -73, -28 };
             int[] arr4 = { };
             
-            printResult(arr1);
-            printResult(arr2);
-            printResult(arr3);
-            printResult(arr4);
+            PrintResult(arr1);
+            PrintResult(arr2);
+            PrintResult(arr3);
+            PrintResult(arr4);
             Console.ReadKey();
         }
 
@@ -36,7 +36,7 @@
             else result = new int[0];
             return result;
         }
-        static void printResult(int[] array)
+        static void PrintResult(int[] array)
         {
             int[] res1 = CountPosSumNeg(array);
             if (res1.Length != 0) Console.WriteLine("[" + res1[0] + ", " + res1[1] + "]");
