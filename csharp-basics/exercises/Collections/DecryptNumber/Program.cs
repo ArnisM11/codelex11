@@ -7,7 +7,7 @@ namespace DecryptNumber
     {
         static void Main(string[] args)
         {
-            var cryptedNumbers = new List<string>
+            var cryptedNumbers = new List<string>                   //08.03 18.11
             {
                 "())(",
                 "*$(#&",
