@@ -14,7 +14,7 @@ namespace Histogram
 
         private static void Main(string[] args)
         {
-            string readText = File.ReadAllText(@"C:\\Users\\i7-240\\Source\\Repos\\Arrays\\csharp-basics\\exercises\\Collections\\Histogram\\midtermscores.txt", Encoding.UTF8);
+            string readText = File.ReadAllText(@"../../midtermscores.txt", Encoding.UTF8);
             List<int> numbers = new List<int>(Array.ConvertAll(readText.Split(' '), int.Parse));
             int[] counts = Enumerable.Range(0, 11).Select(range =>
             numbers.Count(score => score / 10 == range)).ToArray();
