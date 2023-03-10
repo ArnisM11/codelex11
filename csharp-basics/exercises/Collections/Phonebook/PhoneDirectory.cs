@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace PhoneBook
 {
@@ -61,5 +62,36 @@ namespace PhoneBook
                 _dataCount++;
             }
         }
+    }
+    public class SortedDictionary
+    {
+            private SortedDictionary<string, string> _entries;
+
+            public SortedDictionary()
+            {
+                _entries = new SortedDictionary<string, string>();
+            }
+
+            public string GetNumber(string name)
+            {
+                if (_entries.ContainsKey(name))
+                {
+                    return _entries[name];
+                }
+                else
+                {
+                    return null;
+                }
+            }
+
+            public void PutNumber(string name, string number)
+            {
+                if (name == null || number == null)
+                {
+                    throw new Exception("name and number cannot be null");
+                }
+
+                _entries[name] = number;
+            }
     }
 }

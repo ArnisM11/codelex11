@@ -12,13 +12,10 @@ namespace WordCount
     {
         static void Main(string[] args)
         {
-            string text = File.ReadAllText(@"C:\Users\i7-240\Source\Repos\Arrays\csharp-basics\exercises\Collections\WordCount\lear.txt", Encoding.UTF8);
-            
-
+            string text = File.ReadAllText("../../lear.txt", Encoding.UTF8);
             int words = 0;
             int lines = 1;
             int commas = 0;
-
             for(int i = 0;i< text.Length;i++)
             {
                 if (text[i] == ' ' || text[i] == '\n' || text[i] == '\t' || text[i] == char.Parse("'")) words++;

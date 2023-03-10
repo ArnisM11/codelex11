@@ -14,7 +14,7 @@ namespace UniqueValues
             {
                 Console.WriteLine(value);
             }
-                Console.ReadKey();
+            Console.ReadKey();
         }
     }
 }
