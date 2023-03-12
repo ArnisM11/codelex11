@@ -1,6 +1,12 @@
 ﻿using System;
 
-interface ICar
+namespace DragRace
 {
-
+    public interface ICar
+    {
+        void SpeedUp();
+        void SlowDown();
+        string ShowCurrentSpeed();
+        void StartEngine();
+    }
 }

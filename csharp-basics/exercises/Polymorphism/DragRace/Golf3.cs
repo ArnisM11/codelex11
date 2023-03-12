@@ -2,7 +2,7 @@
 
 namespace DragRace
 {
-	public class Raf : ICar
+	public class Golf3 : ICar
 	{
 		private int currentSpeed = 0;
 
