@@ -15,7 +15,6 @@ namespace SumAverageRunningInt
             {
                 sum += number;
             }
-            
         }
     }
 }
