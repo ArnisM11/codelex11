@@ -22,40 +22,40 @@ public class Smoothie
 			switch (ingredient)
 			{
 				case ("Strawberries"):
-					{
-						totalCost += 1.50;
-						break;
-					}
+				{
+					totalCost += 1.50;
+					break;
+				}
 				case ("Banana"):
-					{
-						totalCost += 0.5;
-						break;
-					}
+				{
+					totalCost += 0.5;
+					break;
+				}
 				case ("Mango"):
-					{
-						totalCost += 2.50;
-						break;
-					}
+				{
+					totalCost += 2.50;
+					break;
+				}
 				case ("Blueberries"):
-					{
-						totalCost += 1.00;
-						break;
-					}
+				{
+					totalCost += 1.00;
+					break;
+				}
 				case ("Raspberries"):
-					{
-						totalCost += 1.00;
-						break;
-					}
+				{
+					totalCost += 1.00;
+					break;
+				}
 				case ("Apple"):
-					{
-						totalCost += 1.70;
-						break;
-					}
+				{
+					totalCost += 1.70;
+					break;
+				}
 				case ("Pineapple"):
-					{
-						totalCost += 3.50;
-						break;
-					}
+				{
+					totalCost += 3.50;
+					break;
+				}
 				default:
 					break;
 			}
@@ -81,6 +81,7 @@ public class Smoothie
 			{
 				res.Add("Fusion");
 			}
+
 			else res.Add("Smoothie");
 			return string.Join(" ", res.ToArray());
 		}

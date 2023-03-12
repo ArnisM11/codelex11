@@ -36,7 +36,5 @@
             get => _name;
             set => _name = value;
         }
-
-        
     }
 }

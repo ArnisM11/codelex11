@@ -10,9 +10,9 @@ namespace VideoStore
 
         public Video(string title)
         {
-            Title = title;
-            _available = true;
-            _ratings= new List<double>();
+            this.Title = title;
+            this._available = true;
+            this._ratings= new List<double>();
         }
 
         public void BeingCheckedOut()

@@ -3,27 +3,32 @@
     
     class Product
     {
-        public string name;
-        public double priceAtStart;
-        public int amountAtStart;
-        public Product(string name,double priceAtStart,int amountAtStart)
+        public string _name;
+        public double _priceAtStart;
+        public int _amountAtStart;
+
+        private Product(string name,double priceAtStart,int amountAtStart)
         {
-            this.name = name;
-            this.priceAtStart = priceAtStart;
-            this.amountAtStart = amountAtStart;
+            this._name = name;
+            this._priceAtStart = priceAtStart;
+            this._amountAtStart = amountAtStart;
         }
+
         public void PrintProduct()
         {
-            Console.WriteLine(name + ", price " + priceAtStart + " , amount " + amountAtStart);
+            Console.WriteLine(_name + ", price " + _priceAtStart + " , amount " + _amountAtStart);
         }
+
         public void ChangeQuantity(int newAmount)
         {
-            amountAtStart = newAmount;
+            _amountAtStart = newAmount;
         }
+
         public void ChangePrice(double newPrice)
         {
-            priceAtStart = newPrice;
+            _priceAtStart = newPrice;
         }
+
         static void Main(string[] args)
         {
             Product mouse = new Product("Logitech mouse", 70.00d, 14);
