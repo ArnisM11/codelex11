@@ -20,6 +20,6 @@ namespace VendingMachine
 
         bool AddProduct(string name, Money price, int count);
 
-        bool UpdateProduct(int productNumber, string name, Money? price, int amount);
+        bool UpdateProduct(int productNumber, string name, Money price, int amount);
     }
 }
