@@ -13,8 +13,6 @@
             }
 
             Console.WriteLine(fuelGauge.ReportLevel() + " filled the tank!");
-
-           
             while(fuelGauge.ReportLevel() > 0)
             {
                 odometer.Drive();
@@ -23,7 +21,6 @@
             }
 
             Console.WriteLine(fuelGauge.ReportLevel());
-
             Console.ReadKey();
         }
     }

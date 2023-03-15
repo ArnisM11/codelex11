@@ -9,6 +9,5 @@ public class Date
 		DateTime result = new DateTime(year,month,day);
 		CultureInfo nlCulture = new CultureInfo("nl-NL");
 		return (nlCulture.DateTimeFormat.GetDayName(result.DayOfWeek)).ToString();
-
     }
 }

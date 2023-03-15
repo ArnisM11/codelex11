@@ -62,29 +62,28 @@ public class Smoothie
 		}
         return totalCost;
     }
-		public double GetPrice()
-		{
-			return GetCost() * 1.5 + GetCost();
-		}
-		public string GetName()
-		{
-			List<string> res = _ingredients.ToList();
-			res.Sort();
-			for (int i = 0;i<res.Count;i++)
-			{
-				if (_ingredients[i].Contains("berries"))
-				{
-				_ingredients[i] = _ingredients[i].Replace("berries", "berry");
-				}
-			}
-			if (res.Count() > 1)
-			{
-				res.Add("Fusion");
-			}
+	public double GetPrice()
+	{
+		return GetCost() * 1.5 + GetCost();
+	}
 
-			else res.Add("Smoothie");
-			return string.Join(" ", res.ToArray());
+	public string GetName()
+	{
+		List<string> res = _ingredients.ToList();
+		res.Sort();
+		for (int i = 0;i<res.Count;i++)
+		{
+			if (_ingredients[i].Contains("berries"))
+			{
+				_ingredients[i] = _ingredients[i].Replace("berries", "berry");
+			}
 		}
-		
-	
+		if (res.Count() > 1)
+		{
+			res.Add("Fusion");
+		}
+
+		else res.Add("Smoothie");
+		return string.Join(" ", res.ToArray());
+	}
 }

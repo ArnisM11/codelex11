@@ -6,17 +6,17 @@ namespace Exercise9
 {
     public class BankAccount
     {
-        public double balance;
-        public string name;
+        public double Balance;
+        public string Name;
         public BankAccount(string name, double balance)
         {
-            this.name = name;
-            this.balance = balance;
+            this.Name = name;
+            this.Balance = balance;
         }
         public string ShowUserNameAndBalance()
         {
-            if(balance < 0) return (name + ", -$" + -Math.Round(balance,2));
-            return new string(name + ", $" + Math.Round(balance,2));
+            if(Balance < 0) return (Name + ", -$" + -Math.Round(Balance,2));
+            return new string(Name + ", $" + Math.Round(Balance,2));
         }
     }
 }

@@ -7,6 +7,7 @@ public class FuelGauge
 	{
 		_fuelLevel= 0;
 	}
+
 	public void Fill()
 	{
 		if (_fuelLevel == 70)
@@ -15,10 +16,12 @@ public class FuelGauge
 		}
 		_fuelLevel++;
 	}
+
 	public void Consume()
 	{
 		_fuelLevel--;
 	}
+
 	public int ReportLevel()
 	{
 		return _fuelLevel;

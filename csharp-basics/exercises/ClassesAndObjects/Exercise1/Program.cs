@@ -3,9 +3,9 @@
     
     class Product
     {
-        public string _name;
-        public double _priceAtStart;
-        public int _amountAtStart;
+        private string _name;
+        private double _priceAtStart;
+        private int _amountAtStart;
 
         private Product(string name,double priceAtStart,int amountAtStart)
         {

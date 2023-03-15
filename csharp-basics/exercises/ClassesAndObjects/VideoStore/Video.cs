@@ -10,7 +10,7 @@ namespace VideoStore
 
         public Video(string title)
         {
-            this.Title = title;
+            Title = title;
             this._available = true;
             this._ratings= new List<double>();
         }
