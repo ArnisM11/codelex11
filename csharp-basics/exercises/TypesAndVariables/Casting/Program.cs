@@ -20,11 +20,11 @@ namespace Casting
             string a = "1";
             int b = 2;
             int c = 3;
-            int d = 4;
-            int e = 5;
+            double d = 4;
+            float e = 5;
 
             //fixme - should be 15 :|
-            int sum = Convert.ToInt32(a) + b + c + d + e;
+            int sum = Convert.ToInt32(a) + b + c + (int)d + (int)e;
             Console.WriteLine(sum);
         }
 
