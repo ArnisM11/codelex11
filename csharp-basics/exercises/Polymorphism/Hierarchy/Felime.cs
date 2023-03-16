@@ -6,7 +6,7 @@ namespace Hierarchy
 {
     internal class Felime : Mammal
     {
-        public Felime(string _animalName, string _animalType, double _animalWeight, int _foodEaten, string _livingRegion) : base(_animalName, _animalType, _animalWeight, _foodEaten,_livingRegion)
+        public Felime(string animalName, string animalType, double animalWeight, int foodEaten, string livingRegion) : base(animalName, animalType, animalWeight, foodEaten,livingRegion)
         {
             
         }

@@ -4,21 +4,21 @@ namespace DragRace
 {
 	public class Raf : ICar
 	{
-		private int currentSpeed = 0;
+		private int _currentSpeed = 0;
 
 		public void SpeedUp()
 		{
-			currentSpeed += 2;
+			_currentSpeed += 2;
 		}
 
 		public void SlowDown()
 		{
-			currentSpeed -= 5;
+			_currentSpeed -= 5;
 		}
 
 		public string ShowCurrentSpeed()
 		{
-			return currentSpeed.ToString();
+			return _currentSpeed.ToString();
 		}
 
 		public void StartEngine()

@@ -8,7 +8,7 @@ namespace Hierarchy
     {
         public string breed { get; set; }
 
-        public Cat(string _animalName, string _animalType, double _animalWeight, int _foodEaten, string _livingRegion) : base(_animalName, _animalType, _animalWeight, _foodEaten, _livingRegion)
+        public Cat(string animalName, string animalType, double animalWeight, int foodEaten, string livingRegion) : base(animalName, animalType, animalWeight, foodEaten, livingRegion)
         {
             breed = breed;
         }
@@ -18,11 +18,11 @@ namespace Hierarchy
         }
         new public void eat(Food food)
         {
-            _foodEaten = food.quantity;
+            foodEaten = food.quantity;
         }
         public override string ToString()
         {
-            return new string(_animalType + " [" + _animalName +", "+ breed +  ", " + _animalWeight + ", " + _livingRegion + ", " + _foodEaten + "]");
+            return new string(animalType + " [" + animalName +", "+ breed +  ", " + animalWeight + ", " +  livingRegion + ", " + foodEaten + "]");
         }
     }
 }

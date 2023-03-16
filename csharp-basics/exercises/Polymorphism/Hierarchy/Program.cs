@@ -7,9 +7,7 @@ namespace Hierarchy
     {
         static void Main(string[] args)
         {
-            //string c1 = "Cat Gray 1,1 Home Persian";
             string t1 = "Tiger Typcho 167,7 Asia";
-            string z1 = "Zebra Longie 205,50 Australia";
             string[] arr = t1.Split(' ');
             string type = arr[0];
             string food1 = "Vegetable 4";

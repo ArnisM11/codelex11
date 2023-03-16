@@ -8,20 +8,20 @@ namespace Exercise3
 {
     internal class Student : Person
     {
-        private double gpa { get; set; }
+        private double _gpa { get; set; }
         public Student(double gpa)
         {
-            this.gpa = gpa;
+            this._gpa = gpa;
         }
         public Student(string firstName, string lastName, string address, int id,double gpa) : base(firstName, lastName, address, id)
         {
-            this.gpa = gpa;
+            this._gpa = gpa;
         }
 
         public override void display()
         {
             base.display();
-            Console.WriteLine("GPA : " + gpa);
+            Console.WriteLine("GPA : " + _gpa);
         }
     }
 }

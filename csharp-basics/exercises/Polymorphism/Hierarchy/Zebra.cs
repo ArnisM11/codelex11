@@ -6,7 +6,7 @@ namespace Hierarchy
 {
     internal class Zebra : Mammal 
     {
-        public Zebra(string _animalName, string _animalType, double _animalWeight, int _foodEaten, string _livingRegion) : base(_animalName, _animalType, _animalWeight, _foodEaten, _livingRegion)
+        public Zebra(string animalName, string animalType, double animalWeight, int foodEaten, string livingRegion) : base(animalName, animalType, animalWeight, foodEaten, livingRegion)
         {
            
         }
@@ -20,12 +20,12 @@ namespace Hierarchy
             {
                 Console.WriteLine("Zebras are not eating that type of food! ");
             }
-            else _foodEaten = food.quantity;
+            else foodEaten = food.quantity;
 
         }
         public override string ToString()
         {
-            return new string(_animalType + " [" + _animalName + ", " + _animalWeight + ", " + _livingRegion + ", " + _foodEaten + "]");
+            return new string(animalType + " [" + animalName + ", " + animalWeight + ", " + livingRegion + ", " + foodEaten + "]");
         }
     }
 }

@@ -10,31 +10,31 @@ namespace Exercise3
 {
     internal class Person
     {
-        private string firstName { get; set; }
-        private string lastName { get; set; }
-        private string address { get; set; }
-        private int id { get; set; }
+        private string _firstName { get; set; }
+        private string _lastName { get; set; }
+        private string _address { get; set; }
+        private int _id { get; set; }
 
         public Person()
         {
-            firstName = string.Empty;
-            lastName = string.Empty;
-            address = string.Empty;
-            id = 0;
+            _firstName = string.Empty;
+            _lastName = string.Empty;
+            _address = string.Empty;
+            _id = 0;
         }
         public Person(string firstName, string lastName, string address,int id)
         {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.address = address;
-            this.id = id;
+            this._firstName = firstName;
+            this._lastName = lastName;
+            this._address = address;
+            this._id = id;
         }
         public virtual void display()
         {
-            var result = "\nFirst name : " + firstName + "\n";
-            result += "Last name : " + lastName + "\n";
-            result += "Address : " + address + "\n";
-            result += "ID : " + id ;
+            var result = "\nFirst name : " + _firstName + "\n";
+            result += "Last name : " + _lastName + "\n";
+            result += "Address : " + _address + "\n";
+            result += "ID : " + _id ;
             Console.WriteLine(result);
         }
 

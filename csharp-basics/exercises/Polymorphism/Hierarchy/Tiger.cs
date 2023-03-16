@@ -6,7 +6,7 @@ namespace Hierarchy
 {
     internal class Tiger : Felime
     {
-        public string livingRegion { get; set; }
+        new public string livingRegion { get; set; }
 
         public Tiger(string _animalName, string _animalType, double _animalWeight, int _foodEaten, string _livingRegion) : base(_animalName, _animalType, _animalWeight, _foodEaten, _livingRegion)
         {
@@ -22,11 +22,11 @@ namespace Hierarchy
             {
                 Console.WriteLine("Tigers are not eating that type of food! ");
             }
-            else _foodEaten = food.quantity;
+            else foodEaten = food.quantity;
         }
         public override string ToString()
         {
-            return new string(_animalType +" ["+ _animalName+ ", "+ _animalWeight+ ", "+ livingRegion+", "+  _foodEaten + "]");
+            return new string(animalType +" ["+ animalName+ ", "+animalWeight+ ", "+ livingRegion+", "+  foodEaten + "]");
         }
     }
 }

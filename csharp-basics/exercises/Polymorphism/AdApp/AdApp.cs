@@ -6,21 +6,30 @@ namespace AdApp
 {
     public class AdApp : Advert
     {
-        private string dimensions;
-        private int numberOfCopies;
-        private double costPerCopy;
+        private string _dimensions;
+        private int _numberOfCopies;
+        private double _costPerCopy;
 
         public AdApp()
         {
-            this.dimensions= string.Empty;
-            this.numberOfCopies= 0;
-            this.costPerCopy= 0;
+            this._dimensions= string.Empty;
+            this._numberOfCopies= 0;
+            this._costPerCopy= 0;
         }
         public AdApp(string dimensions, int numberOfCopies, double costPerCopy)
         {
-            this.dimensions = dimensions;
-            this.numberOfCopies = numberOfCopies;
-            this.costPerCopy = costPerCopy;
+            this._dimensions = dimensions;
+            this._numberOfCopies = numberOfCopies;
+            this._costPerCopy = costPerCopy;
+        }
+        public new int Cost()
+        {
+            return base.Cost();
+        }
+
+        public override string ToString()
+        {
+            return base.ToString();
         }
     }
 }
