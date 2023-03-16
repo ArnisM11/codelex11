@@ -20,6 +20,12 @@ namespace Hierarchy
             {
                 Console.WriteLine("Zebras are not eating that type of food! ");
             }
+            else _foodEaten = food.quantity;
+
+        }
+        public override string ToString()
+        {
+            return new string(_animalType + " [" + _animalName + ", " + _animalWeight + ", " + _livingRegion + ", " + _foodEaten + "]");
         }
     }
 }

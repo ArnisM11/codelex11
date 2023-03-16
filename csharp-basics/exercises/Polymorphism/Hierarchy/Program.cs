@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Hierarchy
 {
@@ -6,17 +7,49 @@ namespace Hierarchy
     {
         static void Main(string[] args)
         {
-            string c1 = "Cat Gray 1.1 Home Persian";
-            string[] arr = c1.Split(' ');
-            //Console.WriteLine(arr[1]);
-            Cat c2 = new Cat("Muris","Cat",1.1,2,"Riga");
-            //Mammal m1 = new Mammal("Muris", "Zils", 2.2, 2, "Riga");
-            Tiger t1 = new Tiger("Tiger", "Blue", 14.5, 4, "Sigulda");
+            //string c1 = "Cat Gray 1,1 Home Persian";
+            string t1 = "Tiger Typcho 167,7 Asia";
+            string z1 = "Zebra Longie 205,50 Australia";
+            string[] arr = t1.Split(' ');
+            string type = arr[0];
+            string food1 = "Vegetable 4";
+            string[] foodArr = food1.Split(' ');
+            Vegetable f1 = new Vegetable();
+            Meat m1 = new Meat();
 
-            Console.WriteLine();
-            
+            if (foodArr[0] == "Vegetable")
+            {
+                f1 = new Vegetable(Convert.ToInt32(foodArr[1]));
+            }
+            else if(foodArr[0] == "Meat")
+            {
+                m1 = new Meat(Convert.ToInt32(foodArr[1]));
+            }
 
-
+            switch (type)
+            {
+                case "Zebra":
+                    Zebra zeb = new Zebra(arr[1], arr[0], Convert.ToDouble(arr[2]),0, arr[3]);
+                    zeb.makeSound();
+                    zeb.eat(f1);
+                    break;
+                case "Tiger":
+                    Tiger tig = new Tiger(arr[1], arr[0], Convert.ToDouble(arr[2]),0, arr[3]);
+                    tig.makeSound();
+                    tig.eat(f1);
+                    break;
+                case "Mouse":
+                    Mouse mou = new Mouse(arr[1], arr[0], Convert.ToDouble(arr[2]),0, arr[3]);
+                    mou.makeSound();
+                    break;
+                case "Cat":
+                    Cat cat = new Cat(arr[1], arr[0], Convert.ToDouble(arr[2]),0, arr[3]);
+                    cat.breed = arr[5];
+                    cat.makeSound();
+                    break;
+                default:
+                    break;
+            }
             Console.ReadKey();
         }
     }

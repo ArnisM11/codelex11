@@ -6,6 +6,13 @@ namespace Hierarchy
 {
     abstract class Food
     {
-        private int quantity { get; set; }
+        public int quantity { get; set; }
+        
+        public Food()
+        { }
+        public Food(int quantity)
+        {
+            this.quantity = quantity;
+        }
     }
 }

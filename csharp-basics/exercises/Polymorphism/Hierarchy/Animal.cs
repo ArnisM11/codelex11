@@ -7,9 +7,9 @@ namespace Hierarchy
     abstract class Animal
     {
         public string _animalName { get; set; }
-        private string _animalType { get; set; }
-        private double _animalWeight { get; set; }
-        private int _foodEaten { get; set; }
+        public string _animalType { get; set; }
+        public double _animalWeight { get; set; }
+        public int _foodEaten { get; set; }
 
 
         public Animal()

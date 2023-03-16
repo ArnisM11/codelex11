@@ -6,11 +6,11 @@ namespace Hierarchy
 {
     internal class Cat : Felime
     {
-        private string breed { get; set; }
+        public string breed { get; set; }
 
         public Cat(string _animalName, string _animalType, double _animalWeight, int _foodEaten, string _livingRegion) : base(_animalName, _animalType, _animalWeight, _foodEaten, _livingRegion)
         {
-            this.breed = breed;
+            breed = breed;
         }
         new public void makeSound()
         {
@@ -18,7 +18,11 @@ namespace Hierarchy
         }
         new public void eat(Food food)
         {
-           
+            _foodEaten = food.quantity;
+        }
+        public override string ToString()
+        {
+            return new string(_animalType + " [" + _animalName +", "+ breed +  ", " + _animalWeight + ", " + _livingRegion + ", " + _foodEaten + "]");
         }
     }
 }

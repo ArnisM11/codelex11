@@ -6,5 +6,10 @@ namespace Hierarchy
 {
     internal class Meat : Food
     {
+        public Meat() { }
+        public Meat(int quantity) : base(quantity)
+        {
+
+        }
     }
 }
