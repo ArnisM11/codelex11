@@ -3,8 +3,8 @@ namespace Exercise6
 {
     class Dog
     {
-        public string name;
-        public string sex;
+        private string name;
+        private string sex;
         public Dog? mother { get; set; }
         public Dog? father { get; set; }
 
