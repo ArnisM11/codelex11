@@ -6,13 +6,13 @@ namespace Hierarchy
 {
     abstract class Food
     {
-        public int quantity { get; set; }
+        public int Quantity { get; set; }
         
         public Food()
         { }
         public Food(int quantity)
         {
-            this.quantity = quantity;
+            this.Quantity = quantity;
         }
     }
 }

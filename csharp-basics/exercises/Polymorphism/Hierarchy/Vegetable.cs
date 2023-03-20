@@ -8,7 +8,7 @@ namespace Hierarchy
     {
         public Vegetable()
         {
-            quantity= 0;
+            Quantity= 0;
         }
         public Vegetable(int quantity) : base(quantity)
         {

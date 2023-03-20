@@ -42,7 +42,7 @@ namespace Hierarchy
                     break;
                 case "Cat":
                     Cat cat = new Cat(arr[1], arr[0], Convert.ToDouble(arr[2]),0, arr[3]);
-                    cat.breed = arr[5];
+                    cat.Breed = arr[5];
                     cat.makeSound();
                     break;
                 default:

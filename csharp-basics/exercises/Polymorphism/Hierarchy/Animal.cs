@@ -6,25 +6,25 @@ namespace Hierarchy
 {
     abstract class Animal
     {
-        public string animalName { get; set; }
-        public string animalType { get; set; }
-        public double animalWeight { get; set; }
-        public int foodEaten { get; set; }
+        public string AnimalName { get; set; }
+        public string AnimalType { get; set; }
+        public double AnimalWeight { get; set; }
+        public int FoodEaten { get; set; }
 
 
         public Animal()
         {
-            animalName= string.Empty;
-            animalType= string.Empty;
-            foodEaten= 0;
-            animalWeight = 0.0d;
+            AnimalName= string.Empty;
+            AnimalType= string.Empty;
+            FoodEaten= 0;
+            AnimalWeight = 0.0d;
         }
         public Animal(string _animalName, string _animalType, double _animalWeight, int _foodEaten)
         {
-            animalName = _animalName;
-            animalType = _animalType;
-            animalWeight = _animalWeight;
-            foodEaten = _foodEaten;
+            AnimalName = _animalName;
+            AnimalType = _animalType;
+            AnimalWeight = _animalWeight;
+            FoodEaten = _foodEaten;
         }
 
         public void makeSound()
