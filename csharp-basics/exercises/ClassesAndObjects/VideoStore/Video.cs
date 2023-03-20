@@ -1,40 +1,46 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace VideoStore
 {
     class Video
     {
+        private bool _available;
+        private List<double> _ratings;
+
         public Video(string title)
         {
-            
+            Title = title;
+            _available = true;
+            _ratings= new List<double>();
         }
 
         public void BeingCheckedOut()
         {
-            
+            _available = false;
         }
 
         public void BeingReturned()
         {
-            
+            _available = true;
         }
 
         public void ReceivingRating(double rating)
         {
-            
+            _ratings.Add(rating);
         }
 
         public double AverageRating()
         {
-            return 0;
+            return _ratings.Average();
         }
 
         public bool Available()
         {
-            return true;
+            return _available;
         }
 
-        public string Title => "";
+        public string Title { get; set; }
 
         public override string ToString()
         {
