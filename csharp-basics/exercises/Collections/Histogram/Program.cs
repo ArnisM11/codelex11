@@ -9,15 +9,20 @@ namespace Histogram
 {
     class Program
     {
-        private const string Path = "../Histogram/midtermscores.txt";
-
         private static void Main(string[] args)
         {
-            var readText = File.ReadAllLines(Path);
-            foreach (var s in readText)
+            string readText = File.ReadAllText("../../midtermscores.txt", Encoding.UTF8);
+            List<int> numbers = new List<int>(Array.ConvertAll(readText.Split(' '), int.Parse));
+            int[] counts = Enumerable.Range(0, 11).Select(range =>
+            numbers.Count(score => score / 10 == range)).ToArray();
+            for(int i = 0; i < counts.Length-1; i++)
             {
-                Console.WriteLine(s);
+                string range = String.Format("{0:D2} - {1:D2}:", i * 10, i * 10 + 9);
+                string stars = new string('*', counts[i]);
+                Console.WriteLine(range + " " + stars);
             }
+            Console.WriteLine("    100: " + new String('*', counts[10]));
+            Console.ReadKey();
         }
     }
 }
