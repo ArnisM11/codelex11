@@ -18,12 +18,14 @@ namespace Exercise1
             {
                 Console.WriteLine(auto);
             }
+
             Console.WriteLine();
             HashSet<string> set = new HashSet<string>(array);
             foreach (var auto in set)
             {
                 Console.WriteLine(auto);
             }
+
             Console.WriteLine();
             Dictionary<string, string> dict = new Dictionary<string, string>()
             {
@@ -38,6 +40,7 @@ namespace Exercise1
             {
                 Console.WriteLine($"{auto.Key} -> {auto.Value}");
             }
+
             Console.ReadKey();
         }
     }

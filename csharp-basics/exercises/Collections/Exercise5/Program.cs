@@ -8,6 +8,7 @@
             Console.WriteLine(isHappy(4));
             Console.ReadKey();
         }
+
         public static string isHappy(int num)
         {
             while (num != 1 && num != 4)
