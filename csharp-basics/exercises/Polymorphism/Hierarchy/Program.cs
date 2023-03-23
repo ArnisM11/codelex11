@@ -28,22 +28,22 @@ namespace Hierarchy
             {
                 case "Zebra":
                     Zebra zeb = new Zebra(arr[1], arr[0], Convert.ToDouble(arr[2]),0, arr[3]);
-                    zeb.makeSound();
-                    zeb.eat(f1);
+                    zeb.MakeSound();
+                    zeb.Eat(f1);
                     break;
                 case "Tiger":
                     Tiger tig = new Tiger(arr[1], arr[0], Convert.ToDouble(arr[2]),0, arr[3]);
-                    tig.makeSound();
-                    tig.eat(f1);
+                    tig.MakeSound();
+                    tig.Eat(f1);
                     break;
                 case "Mouse":
                     Mouse mou = new Mouse(arr[1], arr[0], Convert.ToDouble(arr[2]),0, arr[3]);
-                    mou.makeSound();
+                    mou.MakeSound();
                     break;
                 case "Cat":
                     Cat cat = new Cat(arr[1], arr[0], Convert.ToDouble(arr[2]),0, arr[3]);
                     cat.Breed = arr[5];
-                    cat.makeSound();
+                    cat.MakeSound();
                     break;
                 default:
                     break;

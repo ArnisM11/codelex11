@@ -11,12 +11,7 @@ namespace Hierarchy
         public Mammal(string animalName, string animalType, double animalWeight, int foodEaten,string livingRegion) : base(animalName,animalType,animalWeight,foodEaten)
         {
             this.LivingRegion = livingRegion;
-            
         }
-        public void MakeSound()
-        {
-            Console.WriteLine("MaMMM");
-        }
-       
+
     }
 }

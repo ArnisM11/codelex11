@@ -10,11 +10,11 @@ namespace Hierarchy
         {
             
         }
-        new public void MakeSound()
+        public override void MakeSound()
         {
             Console.WriteLine("miumiu");
         }
-        new public void eat(Food food)
+        public override void Eat(Food food)
         {
             if(food is Meat)
             {

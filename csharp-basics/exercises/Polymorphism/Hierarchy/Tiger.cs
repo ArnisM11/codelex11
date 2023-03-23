@@ -12,11 +12,11 @@ namespace Hierarchy
         {
             
         }
-        new public void makeSound()
+        public override void MakeSound()
         {
             Console.WriteLine("RAAAWRRRR");
         }
-        new public void eat(Food food)
+        public override void Eat(Food food)
         {
             if (food is Vegetable)
             {

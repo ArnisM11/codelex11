@@ -27,14 +27,8 @@ namespace Hierarchy
             FoodEaten = _foodEaten;
         }
 
-        public void makeSound()
-        {
-            Console.WriteLine("MUrrrrr");
-        }
+        public abstract void MakeSound();
+        public abstract void Eat(Food food);
 
-        public void eat(Food food)
-        {
-
-        }
     }
 }

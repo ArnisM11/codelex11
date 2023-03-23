@@ -12,11 +12,11 @@ namespace Hierarchy
         {
             Breed = Breed;
         }
-        new public void makeSound()
+        public override void MakeSound()
         {
             Console.WriteLine("MMjauuuuu");
         }
-        new public void eat(Food food)
+        public override void Eat(Food food)
         {
             FoodEaten = food.Quantity;
         }
