@@ -10,5 +10,11 @@ namespace VendingMachine
     {
         public int Euros { get; set; }
         public int Cents { get; set; }
+
+        public Money(int eur, int cents)
+        {
+            this.Euros = eur;
+            this.Cents = cents;
+        }
     }
 }
