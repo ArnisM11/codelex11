@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hierarchy
 {
-    internal class Vegetable : Food
+    public class Vegetable : Food
     {
         public Vegetable()
         {
@@ -12,7 +12,10 @@ namespace Hierarchy
         }
         public Vegetable(int quantity) : base(quantity)
         {
-
+            if (Quantity < 0)
+            {
+                throw new InvalidFoodException();
+            }
         }
     }
 }

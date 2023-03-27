@@ -4,15 +4,17 @@ using System.Text;
 
 namespace Hierarchy
 {
-    abstract class Food
+    public abstract class Food
     {
         public int Quantity { get; set; }
-        
+
         public Food()
-        { }
+        {
+            Quantity = 0;
+        }
         public Food(int quantity)
         {
-            this.Quantity = quantity;
+            Quantity = quantity;
         }
     }
 }

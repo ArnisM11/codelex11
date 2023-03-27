@@ -12,7 +12,7 @@ namespace Hierarchy.Tests
 {
     public class AnimalTests
     {
-        Hierarchy.Animal a1 = new Hierarchy.Animal();
+        
         [SetUp]
         public void Setup()
         {

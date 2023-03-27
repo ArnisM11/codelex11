@@ -7,7 +7,9 @@ using Hierarchy;
 
 namespace Hierarchy.Tests
 {
-    internal class CatTest 
+    
+    public class CatTest 
     {
+        
     }
 }
