@@ -22,6 +22,12 @@ namespace Hierarchy.Test
             v1 = new Vegetable(amountOfVegetables);
             v1.Quantity.Should().Be(amountOfVegetables);
         }
+        [Test]
+        public void CreateFood_GiveNegativeVegetableQuantity_ShouldThrowInvalidFoodException()
+        {
+            Action act = () => v1 = new Vegetable(-5);
+            act.Should().Throw<InvalidFoodException>();
+        }
 
     }
 }

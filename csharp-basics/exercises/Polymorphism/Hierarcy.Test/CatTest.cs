@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,11 +14,12 @@ namespace Hierarchy.Test
     public class CatTest
     {
         public Cat c1 = new Cat("Muris", "cat", 2.5, 2, "Sigulda");
-
+        
         [SetUp]
         public void Setup()
         {
-            c1 = new Cat("Muris", "cat", 2.5, 2, "Sigulda");
+            //c1 = new Cat("Muris", "cat", 2.5, 2, "Sigulda");
+            c1.Breed = "Zilspalvis";
         }
 
         [Test]
@@ -54,6 +56,23 @@ namespace Hierarchy.Test
         public void ToString_PrintOutInCorrectFormat()
         {
             c1.ToString().Should().Be(new string(c1.AnimalType + " [" + c1.AnimalName + ", " + c1.Breed + ", " + c1.AnimalWeight + ", " + c1.LivingRegion + ", " + c1.FoodEaten + "]"));
+        }
+
+        [Test]
+        public void MakeSound_MakesRightSound()
+        {
+            var stringWriter = new StringWriter();
+            Console.SetOut(stringWriter);
+            c1.MakeSound();
+            var output = stringWriter.ToString();
+            //output.Should().Be("MMjauuuuu");
+            Assert.AreEqual($"{"MMjauuuuu"}\r\n", output);
+        }
+
+        [Test]
+        public void GetBreed_ReturnsGreed()
+        {
+            c1.Breed.Should().Be("Zilspalvis");
         }
     }
 }

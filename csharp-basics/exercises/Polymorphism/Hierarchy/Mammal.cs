@@ -18,6 +18,7 @@ namespace Hierarchy
         }*/
         public Mammal(string animalName, string animalType, double animalWeight, int foodEaten,string livingRegion) : base(animalName,animalType,animalWeight,foodEaten)
         {
+            if (string.IsNullOrEmpty(livingRegion)) throw new InvalidRegionException();
             this.LivingRegion = livingRegion;
         }
 

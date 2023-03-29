@@ -6,16 +6,14 @@ namespace Hierarchy
 {
     public class Vegetable : Food
     {
-        public Vegetable()
-        {
-            Quantity= 0;
-        }
+        public Vegetable() { }
         public Vegetable(int quantity) : base(quantity)
         {
-            if (Quantity < 0)
+            if (quantity < 0)
             {
                 throw new InvalidFoodException();
             }
+            Quantity = quantity;
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FluentAssertions;
+using System.IO;
 
 namespace Hierarchy.Test
 {
@@ -40,6 +41,20 @@ namespace Hierarchy.Test
             Meat m1 = new Meat(4);
             z1.Eat(m1);
             z1.FoodEaten.Should().Be(eatenBefore);
+        }
+        [Test]
+        public void ToString_PrintOutInCorrectFormat()
+        {
+            z1.ToString().Should().Be(new string(z1.AnimalType + " [" + z1.AnimalName + ", " + z1.AnimalWeight + ", " + z1.LivingRegion + ", " + z1.FoodEaten + "]"));
+        }
+        [Test]
+        public void MakeSound_MakesRightSound()
+        {
+            var stringWriter = new StringWriter();
+            Console.SetOut(stringWriter);
+            z1.MakeSound();
+            var output = stringWriter.ToString();
+            Assert.AreEqual($"{"Brrrrr"}\r\n", output);
         }
     }
 }

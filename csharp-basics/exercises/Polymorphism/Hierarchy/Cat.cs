@@ -8,14 +8,6 @@ namespace Hierarchy
     {
         public string Breed { get; set; }
 
-        /*public Cat()
-        {
-            AnimalName = string.Empty;
-            AnimalType = string.Empty;
-            FoodEaten = 0;
-            AnimalWeight = 0.0d;
-            LivingRegion = string.Empty;
-        }*/
         public Cat(string animalName, string animalType, double animalWeight, int foodEaten, string livingRegion) : base(animalName, animalType, animalWeight, foodEaten, livingRegion)
         {
             Breed = Breed;

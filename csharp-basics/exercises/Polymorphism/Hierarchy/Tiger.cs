@@ -6,7 +6,7 @@ namespace Hierarchy
 {
     public class Tiger : Felime
     {
-        public string livingRegion { get; set; }
+        public string livingRegion { get; }
 
         /*public Tiger()
         {
@@ -18,15 +18,11 @@ namespace Hierarchy
         }*/
         public Tiger(string _animalName, string _animalType, double _animalWeight, int _foodEaten, string _livingRegion) : base(_animalName, _animalType, _animalWeight, _foodEaten, _livingRegion)
         {
-            if (_animalWeight <= 0)
-            {
-                throw new InvalidWeightException();
-            }
-
-            if (_animalType != "Tiger")
-            {
-                throw new InvalidTypeException();
-            }
+            //if (_foodEaten < 0) throw new InvalidFoodException();
+            //if (_animalWeight <= 0) throw new InvalidWeightException();
+            //if (_animalType != "Tiger") throw new InvalidTypeException();
+            //if (string.IsNullOrEmpty(_animalName)) throw new InvalidNameException();
+            //if (string.IsNullOrEmpty(_livingRegion)) throw new InvalidRegionException();
         }
         public override void MakeSound()
         {

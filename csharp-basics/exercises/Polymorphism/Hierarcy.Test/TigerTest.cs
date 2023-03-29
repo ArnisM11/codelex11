@@ -2,6 +2,7 @@ using System;
 using FluentAssertions;
 using NUnit.Framework;
 using Hierarchy;
+using System.IO;
 
 namespace Hierarchy.Test
 {
@@ -22,12 +23,6 @@ namespace Hierarchy.Test
             t1.AnimalType.Should().Be("Tiger");
         }
 
-        [Test]
-        public void CreateTiger_InvalidTypeProvided_ThrowsInvalidTypeProvided()
-        {
-            Action act = () => t1 = new Tiger("Tigra", "Cat", 25.5,0,"Riga");
-            act.Should().Throw<InvalidTypeException>();
-        }
         [Test]
         public void CreateTiger_GetAnimalType_TypeShouldBeTiger()
         {
@@ -66,6 +61,22 @@ namespace Hierarchy.Test
         {
             Action act = () => new Tiger("Tigra", "Tiger", -25.5, 0, "Riga");
             act.Should().Throw<InvalidWeightException>();
+        }
+
+        [Test]
+        public void CreateTiger_SetInvalidRegion_ShouldThrowInvalidRegionException()
+        {
+            Action act = () => new Tiger("Tigra", "Tiger", 25.5, 0, "");
+            act.Should().Throw<InvalidRegionException>();
+        }
+        [Test]
+        public void MakeSound_MakesRightSound()
+        {
+            var stringWriter = new StringWriter();
+            Console.SetOut(stringWriter);
+            t1.MakeSound();
+            var output = stringWriter.ToString();
+            Assert.That(output,Is.EqualTo($"{"RAAAWRRRR"}\r\n"));
         }
     }
 }

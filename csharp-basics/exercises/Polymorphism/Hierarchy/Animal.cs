@@ -12,13 +12,13 @@ namespace Hierarchy
         public int FoodEaten { get; set; }
 
 
-        public Animal()
+        /*public Animal()
         {
             AnimalName= string.Empty;
             AnimalType= string.Empty;
             FoodEaten= 0;
             AnimalWeight = 0.0d;
-        }
+        }*/
         public Animal(string _animalName, string _animalType, double _animalWeight, int _foodEaten)
         {
             if (_animalName == string.Empty)
