@@ -8,14 +8,6 @@ namespace Hierarchy
     {
         public string LivingRegion { get; set; }
 
-        /*public Mammal()
-        {
-            AnimalName = string.Empty;
-            AnimalType = string.Empty;
-            FoodEaten = 0;
-            AnimalWeight = 0.0d;
-            LivingRegion = string.Empty;
-        }*/
         public Mammal(string animalName, string animalType, double animalWeight, int foodEaten,string livingRegion) : base(animalName,animalType,animalWeight,foodEaten)
         {
             if (string.IsNullOrEmpty(livingRegion)) throw new InvalidRegionException();

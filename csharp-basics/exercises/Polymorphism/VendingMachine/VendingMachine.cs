@@ -13,6 +13,11 @@ namespace VendingMachine
         public Money Amount { get; set; }
         public Product[] Products { get; set; }
 
+        public List<Money> ValidMoney = new List<Money>()
+        {
+            new Money(0, 10), new Money(0, 20), new Money(0, 50), new Money(1, 0), new Money(2, 0)
+        };
+
         public VendingMachine(string manufacturer, bool hasProducts, Money amount, Product[] products)
         {
             Manufacturer = manufacturer;
@@ -23,12 +28,7 @@ namespace VendingMachine
 
         public Money InsertCoin(Money amount)
         {
-            if (amount.Euros == 0 && amount.Cents == 10 || amount.Euros == 0 && amount.Cents == 20 ||
-                amount.Euros == 0 && amount.Cents == 50 || amount.Euros == 1 && amount.Cents == 0 ||
-                amount.Euros == 2 && amount.Cents == 0)
-            {
-                Amount += amount;
-            }
+            if (ValidMoney.Contains(amount)) Amount += amount;
             return amount;
         }
 
