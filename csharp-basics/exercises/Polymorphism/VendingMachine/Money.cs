@@ -13,8 +13,10 @@ namespace VendingMachine
 
         public Money(int eur, int cents)
         {
-            this.Euros = eur;
-            this.Cents = cents;
+            Euros = eur;
+            Cents = cents;
         }
+        public static Money operator +(Money a, Money b)
+            => new Money(a.Euros + b.Euros, a.Cents + b.Cents);
     }
 }

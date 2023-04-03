@@ -4,11 +4,14 @@ using System.Text;
 
 namespace Hierarchy
 {
-    internal class Mouse : Mammal
+    public class Mouse : Mammal
     {
         public Mouse(string animalName, string animalType, double animalWeight, int foodEaten,string livingRegion) : base(animalName, animalType, animalWeight, foodEaten,livingRegion)
         {
-            
+            //if (string.IsNullOrEmpty(animalName)) throw new InvalidNameException();
+            //if (foodEaten < 0) throw new InvalidFoodException();
+            //if (animalWeight <= 0) throw new InvalidWeightException();
+            //if (string.IsNullOrEmpty(livingRegion)) throw new InvalidRegionException();
         }
         public override void MakeSound()
         {
@@ -20,7 +23,7 @@ namespace Hierarchy
             {
                 Console.WriteLine("Mouses are not eating that type of food! ");
             }
-            FoodEaten = food.Quantity;
+            else FoodEaten += food.Quantity;
         }
         public override string ToString()
         {

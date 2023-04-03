@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hierarchy
 {
-    internal class Zebra : Mammal 
+    public class Zebra : Mammal 
     {
         public Zebra(string animalName, string animalType, double animalWeight, int foodEaten, string livingRegion) : base(animalName, animalType, animalWeight, foodEaten, livingRegion)
         {
@@ -20,7 +20,7 @@ namespace Hierarchy
             {
                 Console.WriteLine("Zebras are not eating that type of food! ");
             }
-            else FoodEaten = food.Quantity;
+            else FoodEaten += food.Quantity;
 
         }
         public override string ToString()

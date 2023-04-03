@@ -12,24 +12,24 @@ namespace VendingMachine
         public bool HasProducts { get; set; }
         public Money Amount { get; set; }
         public Product[] Products { get; set; }
-        public VendingMachine()
+
+        public List<Money> ValidMoney = new List<Money>()
         {
-            this.Manufacturer = null;
-            this.HasProducts = false;
-            this.Products = null;
-        }
+            new Money(0, 10), new Money(0, 20), new Money(0, 50), new Money(1, 0), new Money(2, 0)
+        };
 
         public VendingMachine(string manufacturer, bool hasProducts, Money amount, Product[] products)
         {
-            this.Manufacturer = manufacturer;
-            this.HasProducts = hasProducts;
-            this.Amount = amount;
-            this.Products = products;
+            Manufacturer = manufacturer;
+            HasProducts = hasProducts;
+            Amount = amount;
+            Products = products;
         }
 
         public Money InsertCoin(Money amount)
         {
-            return Amount;
+            if (ValidMoney.Contains(amount)) Amount += amount;
+            return amount;
         }
 
         public Money ReturnMoney()
@@ -39,6 +39,8 @@ namespace VendingMachine
 
         public bool AddProduct(string name, Money price, int count)
         {
+            if (string.IsNullOrEmpty(name)) throw new InvalidNameException();
+            if (count <= 0) throw new InvalidProductCountException();
             Product[] tmp = new Product[this.Products.Length + 1];
             Product p1 = new Product();
             p1.Name = name;
@@ -64,13 +66,14 @@ namespace VendingMachine
         {
             var result = "";
             Console.WriteLine();
-            Console.WriteLine("-#-"+"+---Name----+-Price(eur)-+-Price(c)-+-Avaliable-" );
+            Console.WriteLine("-#-"+"+---Name----+-Price(eur)-+-Price(c)-+-Available-" );
             foreach(var prod in Products)
             {
                 result = " "+(Array.IndexOf(Products,prod)+1).ToString().PadRight(4) + prod.Name.PadRight(16).PadLeft(3) + (prod.Price.Euros).ToString().PadRight(12).PadLeft(3) + prod.Price.Cents.ToString().PadRight(12).PadLeft(3) + prod.Available.ToString().PadRight(5);
                 if(prod.Available >= 1) Console.WriteLine(result);
-
             } 
+            
         }
+        
     }
 }

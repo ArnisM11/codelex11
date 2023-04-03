@@ -1,0 +1,20 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\i7-240\AppData\Local\Temp\JetBrains\ReSharperPlatformVs17\vAny_3b99e926\CoverageData\_Polymorphism.-1946816540\Snapshot\snapshot.utdcvr</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4a96e683_002D5ce5_002D4581_002D8c9c_002D28a1db3fe548/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;And&gt;&#xD;
+      &lt;Namespace&gt;Hierarchy.Test&lt;/Namespace&gt;&#xD;
+      &lt;Project Location="C:\Users\i7-240\Source\Repos\Arrays\csharp-basics\exercises\Polymorphism\Hierarcy.Test" Presentation="&amp;lt;Hierarchy.Test&amp;gt;" /&gt;&#xD;
+    &lt;/And&gt;&#xD;
+    &lt;Project Location="C:\Users\i7-240\Source\Repos\Arrays\csharp-basics\exercises\Polymorphism\VendingMachine.Tests" Presentation="&amp;lt;VendingMachine.Tests&amp;gt;" /&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5de48036_002Df188_002D40b2_002Dbcf1_002Df305fd108c2e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CatTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;And&gt;&#xD;
+    &lt;Namespace&gt;Hierarchy.Test&lt;/Namespace&gt;&#xD;
+    &lt;Project Location="C:\Users\i7-240\Source\Repos\Arrays\csharp-basics\exercises\Polymorphism\Hierarcy.Test" Presentation="&amp;lt;Hierarchy.Test&amp;gt;" /&gt;&#xD;
+  &lt;/And&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6705e3fd_002D9350_002D4417_002D854f_002D9b689b5ec573/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Solution /&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

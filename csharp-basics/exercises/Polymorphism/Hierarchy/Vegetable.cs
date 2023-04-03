@@ -4,15 +4,16 @@ using System.Text;
 
 namespace Hierarchy
 {
-    internal class Vegetable : Food
+    public class Vegetable : Food
     {
-        public Vegetable()
-        {
-            Quantity= 0;
-        }
+        public Vegetable() { }
         public Vegetable(int quantity) : base(quantity)
         {
-
+            if (quantity < 0)
+            {
+                throw new InvalidFoodException();
+            }
+            Quantity = quantity;
         }
     }
 }

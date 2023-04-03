@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hierarchy
 {
-    internal class Cat : Felime
+    public class Cat : Felime
     {
         public string Breed { get; set; }
 
@@ -18,7 +18,11 @@ namespace Hierarchy
         }
         public override void Eat(Food food)
         {
-            FoodEaten = food.Quantity;
+            if (food.Quantity <= 0)
+            {
+                throw new InvalidFoodException();
+            }
+            else FoodEaten += food.Quantity;
         }
         public override string ToString()
         {
