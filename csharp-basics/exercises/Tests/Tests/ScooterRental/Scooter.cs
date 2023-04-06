@@ -30,5 +30,7 @@ namespace ScooterRental
         /// Identify if someone is renting this scooter.
         /// </summary>
         public bool IsRented { get; set; }
+        //public List<Rental> RentalHistory { get; set; }
     }
+
 }

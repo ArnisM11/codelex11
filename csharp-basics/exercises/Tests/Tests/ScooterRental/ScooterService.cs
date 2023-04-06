@@ -36,10 +36,12 @@ namespace ScooterRental
                 throw new ScooterIdNotProvidedException();
             }
             var scooter = _scooters.FirstOrDefault(s => s.Id == id);
+
             if (scooter != null && !scooter.IsRented)
             {
                 _scooters.Remove(scooter);
             }
+
             else
             {
                 throw new ScooterNotFoundException();

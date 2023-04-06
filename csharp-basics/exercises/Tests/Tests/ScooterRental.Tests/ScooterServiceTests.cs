@@ -22,14 +22,12 @@ namespace ScooterRental.Tests
             _scooters = new List<Scooter>();
             _scooterService = new ScooterService(_scooters);
         }
-
         [Test]
         public void AddScooter_AddValidScooter_ScooterAdded()
         {
             _scooterService.AddScooter("1", 1m);
             _scooters.Count.Should().Be(1);
         }
-
         [Test]
         public void AddScooter_AddScooterWithoutId_ThrowsScooterIdNotProvidedException()
         {
@@ -42,10 +40,7 @@ namespace ScooterRental.Tests
             Action act = () => _scooterService.AddScooter("", 0.1m);
             act.Should().Throw<ScooterIdNotProvidedException>();
         }
-
-
         [Test]
-
         public void AddScooter_AddScooterWithBadPrice_ThrowsInvalidPriceException()
         {
             Action act = () => _scooterService.AddScooter("1", -5);
@@ -55,12 +50,6 @@ namespace ScooterRental.Tests
         public void RemoveScooter_NullIdProvided_ThrowsScooterIdNotProvidedException()
         {
             Action act = () => _scooterService.RemoveScooter(null);
-            act.Should().Throw<ScooterIdNotProvidedException>();
-        }
-        public void AddScooter_AddingDuplicateScooter_ThrowsScooterExistsException()                        ///8:00
-        {
-            _scooterService.AddScooter("1",1m);
-            Action act = () => _scooterService.AddScooter("1",1m);
             act.Should().Throw<ScooterIdNotProvidedException>();
         }
         [Test]
@@ -76,7 +65,7 @@ namespace ScooterRental.Tests
             act.Should().Throw<ScooterIdNotProvidedException>();
         }
         [Test]
-        public void RemoveScooter__ThrowsScooterIdNotProvidedException()                        ///
+        public void RemoveScooter__ThrowsScooterIdNotProvidedException()                     
         {
             Action act = () => _scooterService.RemoveScooter("");
             act.Should().Throw<ScooterIdNotProvidedException>();
